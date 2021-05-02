@@ -29,6 +29,18 @@ body{
   width: 350px;
 }
 
+.progress-container::before {
+  content: ''; /* on adding this field the whole effect shows up on browser */
+  background-color: #e0e0e0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%); /* this puts the middle of the line at 50% instead of the top */
+  height: 4px;
+  width: 100%;
+  z-index: -1; /* this makes sure that the line is behind the circles */
+}
+
 .progress {
   background-color: #3498db;
   position: absolute;
